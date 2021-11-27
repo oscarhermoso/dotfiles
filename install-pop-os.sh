@@ -6,7 +6,7 @@ mkdir -p .local/bin
 
 
 # Apt Installs
-sudo apt install vim gnome-tweaks code firefox discord fonts-firacode obs-studio
+sudo apt install vim gnome-tweaks code firefox discord fonts-firacode obs-studio azure-cli
 
 
 # https://www.microsoftedgeinsider.com/en-us/download?platform=linux-deb
