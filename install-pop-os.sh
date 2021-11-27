@@ -1,12 +1,10 @@
 sudo apt update && sudo apt upgrade
 
+sudo apt install snapd
+sudo snap install core
 
 # Create directory for AppImages if it does not already exist
 mkdir -p .local/bin
-
-
-# Apt Installs
-sudo apt install vim gnome-tweaks code firefox discord fonts-firacode obs-studio azure-cli
 
 
 # https://www.microsoftedgeinsider.com/en-us/download?platform=linux-deb
@@ -49,5 +47,17 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 
+# Other Apt Installs
+sudo apt install vim gnome-tweaks code firefox discord fonts-firacode obs-studio azure-cli
+
+
 # https://helm.sh/docs/intro/install/
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+
+# https://github.com/ubuntu/microk8s
+sudo snap install microk8s --classic
+sudo usermod -a -G microk8s $USER
+sudo chown -f -R oscarhermoso ~/.kube
+newgrp microk8s
+microk8s enable dns dashboard
